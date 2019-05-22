@@ -27,8 +27,12 @@ echo $map;
 ```
 **Output**
 
-`https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation`
+```
+https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+```
+
 **Screenshot**
+
 ![marker example](samples/marker.png "Marker example")
 
 ### Multiple markers example
