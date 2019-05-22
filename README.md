@@ -65,3 +65,63 @@ https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&mark
 **Screenshot**
 
 ![multiple markers example](samples/multiple-markers.png "Multiple markers example")
+
+### Plain map example
+```php
+<?php
+require_once('/path/to/package.php');
+
+// Prepare the map
+// See https://developers.google.com/maps/documentation/maps-static/get-api-key
+$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
+
+// Set the location of the center of the map and the zoom level view
+$map->set_center( 14.168986 , 121.255112 );
+$map->set_zoom(17);
+
+// Generate the URL
+echo $map;
+?>
+```
+
+**Output**
+
+```
+https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+```
+
+**Screenshot**
+
+![plain map example](samples/plain-map.png "Plain map example")
+
+### Hybrid map example
+```php
+<?php
+require_once('/path/to/package.php');
+
+// Prepare the map
+// See https://developers.google.com/maps/documentation/maps-static/get-api-key
+$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
+
+// Set the location of the center of the map and the zoom level view
+$map->set_center( 14.168986 , 121.255112 );
+$map->set_zoom(17);
+
+// Set the map type
+$map->set_map_type('hybrid');
+
+// Generate the URL
+echo $map;
+?>
+```
+
+**Output**
+
+```
+https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&maptype=hybrid&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+```
+
+**Screenshot**
+
+![hybrid map example](samples/plain-map.png "Hybrid map example")
+

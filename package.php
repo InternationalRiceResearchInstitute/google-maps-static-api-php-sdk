@@ -26,10 +26,28 @@ class Static_Map{
 
 	public function __construct($key){
 		$this->key = $key;
-		$this->size = '240x240';
+		$this->size = '240x240';		// we will set this as the default size
 
-		$this->markers = array();
+		$this->center = '';				// default
+		$this->zoom = '';				// default
+		$this->map_type = 'roadmap';	// default
+		$this->markers = array();		// default
 	}
+
+	public function set_center($latitude_or_address,$longitude=-181){
+		if( 0 <= floatval($latitude_or_address) && floatval($latitude_or_address) <= 90 && 0 <= floatval($longitude) && floatval($longitude) <= 180 ){
+			$this->center = $latitude_or_address . ',' . $longitude;
+		} elseif( $longitude==-181 ){
+			$this->center = $latitude_or_address;
+		} else {
+			$this->center = '';
+		}
+	}
+
+	public function set_zoom($zoom){
+		$this->zoom = $zoom;
+	}
+
 
 	public function add_marker($marker){
 		if( get_class($marker) === 'Marker' ){
@@ -41,9 +59,15 @@ class Static_Map{
 		$this->size = $size;
 	}
 
+	public function set_map_type($map_type){
+		if( in_array( $map_type , array( 'roadmap' , 'satellite' , 'terrain' , 'hybrid' ) ) ){
+			$this->map_type = $map_type;
+		}
+	}
+
+
 	public function __toString(){
 		$markers = "";
-
 		foreach($this->markers as $i => $marker){
 			$markers = $markers . 'markers=' . $marker->get_location();
 			if($i<count($this->markers)-1){
@@ -51,7 +75,29 @@ class Static_Map{
 			}
 		}
 
-		return 'https://maps.googleapis.com/maps/api/staticmap?' . $markers . '&size=' . $this->size . '&key=' . $this->key;
+		$size = '&size=' . $this->size;
+
+		if( $this->map_type !== 'roadmap' ){
+			$map_type = '&maptype=' . $this->map_type;
+		} else {
+			$map_type = '';
+		}
+
+		if( !empty($this->center) ){
+			$center = '&center=' . $this->center;
+		} else {
+			$center = '';
+		}
+
+		if( !empty($this->zoom) ){
+			$zoom = '&zoom=' . $this->zoom;
+		} else {
+			$zoom = '';
+		}
+
+		$key = '&key=' . $this->key;
+
+		return 'https://maps.googleapis.com/maps/api/staticmap?' . $center . $zoom . $markers . $size . $map_type . $key;
 	}
 }
 
