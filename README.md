@@ -56,3 +56,12 @@ $map->add_marker( $east_roundabout );
 echo $map;
 ?>
 ```
+**Output**
+
+```
+https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&markers=14.169831,121.258285&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+```
+
+**Screenshot**
+
+![multiple markers example](samples/multiple-markers.png "Multiple markers example")
