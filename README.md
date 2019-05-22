@@ -4,7 +4,7 @@ PHP-SDK
 
 ## Getting started
 
-Below are the most basic example you can play with.
+Below are the most basic examples you can play with.
 
 ### Marker example
 ```php
@@ -25,6 +25,11 @@ $map->add_marker( $marker );
 echo $map;
 ?>
 ```
+**Output**
+
+`https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation`
+**Screenshot**
+![marker example](samples/marker.png "Marker example")
 
 ### Multiple markers example
 ```php
