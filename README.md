@@ -123,5 +123,5 @@ https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom
 
 **Screenshot**
 
-![hybrid map example](samples/plain-map.png "Hybrid map example")
+![hybrid map example](samples/hybrid-map.png "Hybrid map example")
 
