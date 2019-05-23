@@ -1,21 +1,23 @@
-# Google Maps Static API
+# PHP SDK for Google Maps Static API
 
-PHP-SDK
+Google's [Map Static API](https://developers.google.com/maps/documentation/maps-static/intro) is exhaustingly difficult. Let's make it as easy as 1-2-3! Without further a do, here is its SDK for PHP. Hopefully it would make things easy for developers like you and me.
+
+## Contents
+1. [Getting started](#getting-started)
+2. [Examples](#examples)
+  * [Multiple markers](#multiple-markers)
+  * [Plain map](#plain-map)
+  * [Hybrid map](#hybrid-map)
+3. [Installation](#installation)
+4. [Reference](#reference)
 
 ## Getting started
 
-Below are the most basic examples you can play with.
-
-### Marker example
 ```php
 <?php
 require_once('/path/to/package.php');
 
-// Prepare the map
-// See https://developers.google.com/maps/documentation/maps-static/get-api-key
-$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
-
-// Prepare the marker
+$map = new Static_Map( "YOUR_API_KEY" );
 $marker = new Marker( 14.168986 , 121.255112 );
 
 // Plot the marker to the map
@@ -28,21 +30,21 @@ echo $map;
 **Output**
 
 ```
-https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size=240x240&key=YOUR_API_KEY
 ```
 
 **Screenshot**
 
 ![marker example](samples/marker.png "Marker example")
 
-### Multiple markers example
+## Examples
+
+### Multiple markers
 ```php
 <?php
 require_once('/path/to/package.php');
 
-// Prepare the map
-// See https://developers.google.com/maps/documentation/maps-static/get-api-key
-$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
+$map = new Static_Map( "YOUR_API_KEY" );
 
 // Prepare the markers
 $west_roundabout = new Marker( 14.168986 , 121.255112 );
@@ -59,21 +61,19 @@ echo $map;
 **Output**
 
 ```
-https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&markers=14.169831,121.258285&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&markers=14.169831,121.258285&size=240x240&key=YOUR_API_KEY
 ```
 
 **Screenshot**
 
 ![multiple markers example](samples/multiple-markers.png "Multiple markers example")
 
-### Plain map example
+### Plain map
 ```php
 <?php
 require_once('/path/to/package.php');
 
-// Prepare the map
-// See https://developers.google.com/maps/documentation/maps-static/get-api-key
-$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
+$map = new Static_Map( "YOUR_API_KEY" );
 
 // Set the location of the center of the map and the zoom level view
 $map->set_center( 14.168986 , 121.255112 );
@@ -87,23 +87,20 @@ echo $map;
 **Output**
 
 ```
-https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&key=YOUR_API_KEY
 ```
 
 **Screenshot**
 
 ![plain map example](samples/plain-map.png "Plain map example")
 
-### Hybrid map example
+### Hybrid map
 ```php
 <?php
 require_once('/path/to/package.php');
 
-// Prepare the map
-// See https://developers.google.com/maps/documentation/maps-static/get-api-key
-$map = new Static_Map( "AIzaSequerraKeyOfSomeSortSeeDocumentation" );
+$map = new Static_Map( "YOUR_API_KEY" );
 
-// Set the location of the center of the map and the zoom level view
 $map->set_center( 14.168986 , 121.255112 );
 $map->set_zoom(17);
 
@@ -118,10 +115,9 @@ echo $map;
 **Output**
 
 ```
-https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&maptype=hybrid&key=AIzaSequerraKeyOfSomeSortSeeDocumentation
+https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom=17&size=240x240&maptype=hybrid&key=YOUR_API_KEY
 ```
 
 **Screenshot**
 
 ![hybrid map example](samples/hybrid-map.png "Hybrid map example")
-
