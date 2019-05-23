@@ -1,13 +1,13 @@
 # PHP SDK for Google Maps Static API
 
-Google's [Map Static API](https://developers.google.com/maps/documentation/maps-static/intro) is exhaustingly difficult. Let's make it as easy as 1-2-3! Without further a do, here is its SDK for PHP. Hopefully it would make things easy for developers like you and me.
+Google's [Map Static API](https://developers.google.com/maps/documentation/maps-static/intro) is exhaustingly difficult. This PHP SDK would make things easy as simple as 1-2-3!
 
 ## Contents
 1. [Getting started](#getting-started)
 2. [Examples](#examples)
-  * [Multiple markers](#multiple-markers)
-  * [Plain map](#plain-map)
-  * [Hybrid map](#hybrid-map)
+	* [Multiple markers](#multiple-markers)
+	* [Plain map](#plain-map)
+	* [Hybrid map](#hybrid-map)
 3. [Installation](#installation)
 4. [Reference](#reference)
 
