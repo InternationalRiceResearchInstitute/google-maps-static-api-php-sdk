@@ -1,6 +1,6 @@
 # PHP SDK for Google Maps Static API
 
-Google's [Map Static API](https://developers.google.com/maps/documentation/maps-static/intro) is exhaustingly difficult. This PHP SDK would make things easy as simple as 1-2-3!
+Google's [Map Static API](https://developers.google.com/maps/documentation/maps-static/intro) is exhaustingly difficult. This PHP SDK would make it as easy as 1-2-3!
 
 ## Contents
 1. [Getting started](#getting-started)
@@ -16,7 +16,7 @@ Google's [Map Static API](https://developers.google.com/maps/documentation/maps-
 
 ```php
 <?php
-require_once('/path/to/package.php');
+require_once( "/path/to/package.php" );
 
 $map = new Static_Map( "YOUR_API_KEY" );
 $marker = new Marker( 14.168986 , 121.255112 );
@@ -40,12 +40,10 @@ https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size
 
 ## Examples
 
-Here are those 
-
 ### Multiple markers
 ```php
 <?php
-require_once('/path/to/package.php');
+require_once( "/path/to/package.php" );
 
 $map = new Static_Map( "YOUR_API_KEY" );
 
@@ -74,7 +72,7 @@ https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&mark
 ### Plain map
 ```php
 <?php
-require_once('/path/to/package.php');
+require_once( "/path/to/package.php" );
 
 $map = new Static_Map( "YOUR_API_KEY" );
 
@@ -100,7 +98,7 @@ https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom
 ### Hybrid map
 ```php
 <?php
-require_once('/path/to/package.php');
+require_once( "/path/to/package.php" );
 
 $map = new Static_Map( "YOUR_API_KEY" );
 
@@ -131,10 +129,10 @@ All you need to do is to [download](https://github.com/InternationalRiceResearch
 
 ## Reference
 
-Lorem ipsum dolor sit amet... The full reference document of the package will be written on this section. Which will be filled later or soon.
+Lorem ipsum dolor sit amet... The full reference document of the SDK will be written in this section. Of which will be filled later... or soon.
 
 ## Feedback
 
-Help improve this SDK even by just giving feedback. You can [file an issue](https://github.com/InternationalRiceResearchInstitute/google-maps-static-api-php-sdk/issues/new) if you **detected a bug** or if you want to **request a feature**.
+Help improve this SDK by giving feedback. You can [file an issue](https://github.com/InternationalRiceResearchInstitute/google-maps-static-api-php-sdk/issues/new) if you **detected a bug** or if you want to **request a feature**.
 
-Alternatively, you can [send an email](mailto:a.callejo@irri.org) to the repository "owner"
+Alternatively, you can directly [send an email](mailto:a.callejo@irri.org) to the repository "owner".
