@@ -10,6 +10,7 @@ Google's [Map Static API](https://developers.google.com/maps/documentation/maps-
 	* [Hybrid map](#hybrid-map)
 3. [Installation](#installation)
 4. [Reference](#reference)
+5. [Feedback](#feedback)
 
 ## Getting started
 
@@ -38,6 +39,8 @@ https://maps.googleapis.com/maps/api/staticmap?markers=14.168986,121.255112&size
 ![marker example](samples/marker.png "Marker example")
 
 ## Examples
+
+Here are those 
 
 ### Multiple markers
 ```php
@@ -121,3 +124,17 @@ https://maps.googleapis.com/maps/api/staticmap?&center=14.168986,121.255112&zoom
 **Screenshot**
 
 ![hybrid map example](samples/hybrid-map.png "Hybrid map example")
+
+## Installation
+
+All you need to do is to [download](https://github.com/InternationalRiceResearchInstitute/google-maps-static-api-php-sdk/archive/master.zip) the SDK. That's it.
+
+## Reference
+
+Lorem ipsum dolor sit amet... The full reference document of the package will be written on this section. Which will be filled later or soon.
+
+## Feedback
+
+Help improve this SDK even by just giving feedback. You can [file an issue](https://github.com/InternationalRiceResearchInstitute/google-maps-static-api-php-sdk/issues/new) if you **detected a bug** or if you want to **request a feature**.
+
+Alternatively, you can [send an email](mailto:a.callejo@irri.org) to the repository "owner"
